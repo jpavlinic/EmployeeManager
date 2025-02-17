@@ -1,0 +1,55 @@
+🛠️ Project 1: Employee Management System (Monolithic Architecture)
+Concepts Covered:
+Spring Core: Dependency Injection, IoC
+Spring Boot: Application setup, configuration, and auto-configuration
+Spring MVC: RESTful APIs and request handling
+Spring Data JPA (Hibernate): ORM, entity relationships
+Spring Security: User authentication & authorization with JWT
+Spring AOP: Logging user activities and method execution
+Project Description:
+Develop a backend system to manage employee records. It will support basic CRUD operations for employees, along with user authentication and logging for important actions.
+
+Features:
+User Registration & Login: Authenticate users with JWT tokens.
+Role-Based Access Control: Admins can manage all employees; regular users can view their own records.
+Employee Management: Add, update, delete, and view employee details.
+Activity Logging: Use Spring AOP to log operations like employee additions, deletions, and updates.
+Project Structure:
+Authentication Module
+
+User registration and login endpoints.
+Secure APIs with Spring Security (JWT).
+Employee Management Module
+
+CRUD operations for employees.
+Uses Spring Data JPA with MySQL or PostgreSQL.
+Logging Module (AOP)
+
+Logs method calls and user actions (e.g., "Employee X updated by User Y").
+Key Learning Points:
+Spring Core: Understand how beans are managed and injected.
+Spring Boot: Learn how Spring Boot auto-configures and simplifies application development.
+Spring MVC: Implement REST APIs for employee management.
+Spring Data JPA: Manage relational data using Hibernate and JPA repositories.
+Spring Security: Implement authentication, authorization, and JWT-based protection.
+Spring AOP: Use aspects to log application activity without cluttering business logic.
+Suggested Endpoints:
+Auth:
+
+POST /auth/register – Register a new user
+POST /auth/login – Login and receive JWT
+Employee:
+
+GET /employees – Get all employees (Admin only)
+GET /employees/{id} – Get employee by ID
+POST /employees – Add a new employee (Admin only)
+PUT /employees/{id} – Update employee details
+DELETE /employees/{id} – Delete employee (Admin only)
+Logging:
+
+Log whenever an employee is created, updated, or deleted.
+Tools/Technologies:
+Database: MySQL/PostgreSQL
+Security: Spring Security with JWT
+Logging: Spring AOP + SLF4J/Logback
+Build Tool: Maven

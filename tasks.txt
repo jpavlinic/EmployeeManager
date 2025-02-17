@@ -1,0 +1,90 @@
+Spring JPA & Hibernate - DONE
+1. create entity classes - test sa show tables nakon spring boot run 
+2. Create JPA Repositories
+
+Spring Web
+2.5 Create DTOs – before implementing services and controllers.
+3. Create Service layer/business logic
+4. Create Controller layer / api endpoints
+
+
+Spring security
+Implemnent JwtUtil 
+Implemnent JwtAuthenticationFilter 
+Implemnent SecurityConfig 
+
+Spring AOP
+Implement LoggingAspect
+
+Exceptions 
+Create CustomExceptionHandler – Use @ControllerAdvice to handle exceptions globally.
+
+
+🛠️ Folder-Wise Breakdown
+📂 1. entity (JPA Entities)
+User.java
+Role.java
+Employee.java
+ActivityLog.java
+
+
+-----------------------------------------------------------------------
+📂 2. repository (JPA Repositories)
+UserRepository.java
+RoleRepository.java
+EmployeeRepository.java
+ActivityLogRepository.java
+
+-----------------------------------------------------------------------
+📂 3. dto (Data Transfer Objects)
+AuthRequest.java – for login requests.
+AuthResponse.java – for login responses.
+UserDTO.java – for user registration.
+EmployeeDTO.java – for employee CRUD operations.
+
+-----------------------------------------------------------------------
+📂 4. service (Business Logic)
+AuthService.java – user registration and authentication logic.
+EmployeeService.java – CRUD operations for employees.
+
+-----------------------------------------------------------------------
+📂 5. controller (API Endpoints)
+AuthController.java – /auth/register, /auth/login.
+EmployeeController.java – /employees endpoints for CRUD operations.
+LoggingController.java – /logs endpoint for activity logs.
+
+-----------------------------------------------------------------------
+📂 6. security (JWT Authentication)
+JwtUtil.java – generate/validate tokens.
+JwtAuthenticationFilter.java – intercept requests and authenticate.
+Role based access using UserDetailsService and SecurityContextHolder  - add PreAuthorized to methods needed
+
+-----------------------------------------------------------------------
+📂 7. config (Spring Security Configuration)
+SecurityConfig.java – configure roles and URL access control.
+
+-----------------------------------------------------------------------
+📂 8. aspect (Spring AOP Logging)
+LoggingAspect.java – log employee-related actions.
+
+-----------------------------------------------------------------------
+📂 9. exception (Global Exception Handling)
+CustomExceptionHandler.java – handle application-wide exceptions.
+ResourceNotFoundException.java – for missing resources.
+UnauthorizedException.java – for access violations.
+
+-----------------------------------------------------------------------
+📂 10. util (Utilities)
+PasswordEncoderUtil.java – generate hashed passwords.
+DateUtil.java – (optional) format dates for logs.
+
+-----------------------------------------------------------------------
+🚀 Step-by-Step Flow
+1. JPA & Database → entity & repository
+2. DTOs → dto
+3. Business Logic → service
+4. API Layer → controller
+5. Security → security & config
+6. Logging → aspect
+7. Error Handling → exception
+8. Utilities → util
